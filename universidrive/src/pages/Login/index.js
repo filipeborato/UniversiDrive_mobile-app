@@ -1,52 +1,41 @@
 import 'react-native-gesture-handler';
 import React from "react";
-import { View, StyleSheet, Text, Button, KeyboardAvoidingView, } from "react-native";
-
+import { View, StyleSheet, Text, KeyboardAvoidingView, } from "react-native";
+import Button from "../../components/Button";
 import ButtonText from "../../components/ButtonText";
 import Input from "../../components/Input";
 import LogoImage from "../../assets/svg/logo.svg";
 
-export default function Login({navigation}){
+const Login = () => {
   return (
-    <KeyboardAvoidingView>
-    
+    <KeyboardAvoidingView> 
+    <View style={styles.container}>
       <View style={styles.wrapperLogin}>
-
-      <View style={styles.header}>
+        <View style={styles.header}>
           <LogoImage width={300} height={140} />
           <Text style={styles.headerText}>Carona universitária</Text>
-      </View>
+        </View>
 
         <Input placeholder="E-mail" />
         <Input placeholder="Senha" />
+        <ButtonText />
+        <Button text="entrar" bgcolor="#22ccdd" />
       </View>
 
-        
-        <ButtonText text='Esqueci minha senha'
-        onPress={()=> navigation.navigate('Recoverpassword')}
-        
-        />
-        
-      <View style={styles.container}>
-      <Button title ="entrar" />
-      </View>
-
-      <View style={styles.container}>
-      <Button title="Não tenho cadastro"/>
-      </View>
-      
+      <Button text="Não tenho cadastro" bgcolor="#0099ff" />
+    </View>
     </KeyboardAvoidingView>
   );
 };
 
+export default Login;
+
 const styles = StyleSheet.create({
   container: {
-   
-    width: "100%",
+    flex: 1,
     alignItems: "center",
     justifyContent: "space-between",
-    padding: 10,
-  
+    padding: 30,
   },
 
   wrapperLogin: {

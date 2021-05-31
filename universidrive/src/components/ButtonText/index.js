@@ -1,15 +1,14 @@
 import React from "react";
 import { Text, TouchableOpacity, StyleSheet } from "react-native";
-
-export default function ButtonText ({text,onPress}){
+const ButtonText = () => {
   return (
-    <TouchableOpacity onPress={onPress} activeOpacity={0.7} style={styles.button}>
-      <Text style={styles.text}>Esqueci minha senha</Text>
+    <TouchableOpacity activeOpacity={0.7} style={styles.button}>
+      <Text style={styles.text}>Esqueceu sua senha?</Text>
     </TouchableOpacity>
   );
 };
 
-
+export default ButtonText;
 
 const styles = StyleSheet.create({
   button: {
