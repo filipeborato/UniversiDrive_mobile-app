@@ -1,7 +1,5 @@
-
 import React from "react";
 import { View, StyleSheet, Text, Button, KeyboardAvoidingView } from "react-native";
-
 import ButtonText from "../../components/ButtonText";
 import Input from "../../components/Input";
 import LogoImage from "../../assets/svg/logo.svg";

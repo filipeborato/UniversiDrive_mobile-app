@@ -6,8 +6,46 @@ import ButtonText from "../../components/ButtonText";
 import Input from "../../components/Input";
 import LogoImage from "../../assets/svg/logo.svg";
 import firebase from "@react-native-firebase/auth";
+import { onchangeEmail } from 'react';
+import { onchangePassword } from 'react';
+import { useState } from 'react';
+import { useCallback } from 'react';
 
-const Login = () => {
+export default function Login ({navigation}) {
+  return (
+    
+    <View style={styles.container}>
+      <View style={styles.wrapperLogin}>
+        <View style={styles.header}>
+          <LogoImage width={300} height={140} />
+          <Text style={styles.headerText}>Carona universitária</Text>
+        </View>
+
+        <Input
+          placeholder="E-mail"
+          onChangeText={onchangeEmail}
+          keyboardType="email-address"
+        />
+        <Input
+          placeholder="Senha"
+          onChangeText={onchangePassword}
+          secureTextEntry
+        />
+        <ButtonText
+        onPress={() =>navigation.navigate('Recoverpassword')}
+        />
+        <Button text="entrar" bgcolor="#22ccdd" />
+      </View>
+
+      <Button text="Não tenho cadastro" bgcolor="#0099ff"
+      onPress={() =>navigation.navigate('Idonthavearegistration')}
+      />
+    </View>
+    
+  );
+  };
+
+const login = () => {
   const firebaseAuth = firebase();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -35,38 +73,9 @@ const Login = () => {
         var errorMessage = error.message;
         // ..
       });
-  }, [firebase, email, password]);
-
-  return (
-    <KeyboardAvoidingView> 
-    <View style={styles.container}>
-      <View style={styles.wrapperLogin}>
-        <View style={styles.header}>
-          <LogoImage width={300} height={140} />
-          <Text style={styles.headerText}>Carona universitária</Text>
-        </View>
-
-        <Input
-          placeholder="E-mail"
-          onChangeText={onchangeEmail}
-          keyboardType="email-address"
-        />
-        <Input
-          placeholder="Senha"
-          onChangeText={onchangePassword}
-          secureTextEntry
-        />
-        <ButtonText />
-        <Button text="entrar" bgcolor="#22ccdd" onPress={login} />
-      </View>
-
-      <Button text="Não tenho cadastro" bgcolor="#0099ff" />
-    </View>
-    </KeyboardAvoidingView>
-  );
+  }, [firebase, email, password]); 
 };
 
-export default Login;
 
 const styles = StyleSheet.create({
   container: {

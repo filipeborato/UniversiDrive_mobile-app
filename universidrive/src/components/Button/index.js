@@ -1,7 +1,7 @@
 import React from "react";
 import { Text, TouchableOpacity, StyleSheet, Bu } from "react-native";
 
-const Button = ({ bgcolor, text, onPress }) => {
+export default function Button ({ bgcolor, text, onPress }) {
   return (
     <TouchableOpacity
       activeOpacity={0.7}
@@ -13,7 +13,6 @@ const Button = ({ bgcolor, text, onPress }) => {
   );
 };
 
-export default Button;
 
 const styles = StyleSheet.create({
   button: {
