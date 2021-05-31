@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "236990959197",
+    "project_id": "prj-caronas",
+    "storage_bucket": "prj-caronas.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:236990959197:android:673c087b696d43848087b4",
+        "android_client_info": {
+          "package_name": "com.universidrive"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "236990959197-khsb5mf1q2p8oi7jjro4sr609v6203id.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAftQGw4DhGOYTKfpnUzvOQYH5wktQ85Sk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "236990959197-khsb5mf1q2p8oi7jjro4sr609v6203id.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
