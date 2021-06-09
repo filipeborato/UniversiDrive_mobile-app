@@ -4,7 +4,7 @@ import ButtonText from "../../components/ButtonText";
 import Input from "../../components/Input";
 import LogoImage from "../../assets/svg/logo.svg";
 
-export default function Idonthavearegistration({navigation}){
+export default function Lastname ({navigation}){
   return (
     <KeyboardAvoidingView style={styles.container}>
     
@@ -15,7 +15,7 @@ export default function Idonthavearegistration({navigation}){
         </View>
 
         <Text style={styles.text1}>
-          Diga-nos seu primeiro nome:
+         Agora digite seu sobrenome completo:
         </Text>
 
         <Input placeholder="Digite" />
@@ -25,7 +25,7 @@ export default function Idonthavearegistration({navigation}){
         </View>
 
       <Button 
-       onPress={()=> navigation.navigate ('Lastname')}
+       onPress={()=> navigation.navigate('')}
         title="Avançar"
       />
     
