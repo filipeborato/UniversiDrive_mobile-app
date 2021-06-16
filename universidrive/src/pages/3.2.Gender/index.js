@@ -4,7 +4,7 @@ import ButtonText from "../../components/ButtonText";
 import Input from "../../components/Input";
 import LogoImage from "../../assets/svg/logo.svg";
 
-export default function Lastname ({navigation}){
+export default function Gender ({navigation}){
   return (
     <KeyboardAvoidingView style={styles.container}>
     
@@ -15,17 +15,17 @@ export default function Lastname ({navigation}){
         </View>
 
         <Text style={styles.text1}>
-         Agora digite seu sobrenome completo:
+         Como você se identifica?
         </Text>
 
-        <Input placeholder="Digite" />
+        <Input placeholder="Homem, mulher, outro..." />
         <Text style={styles.text2}>
-        Essa informação será utilizada para identificar seu usuário na plataforma.
+        Essa informação é importante para encontrarmos quem se conecta melhor com você.
         </Text>
         </View>
 
       <Button 
-       onPress={()=> navigation.navigate('Gender')}
+       onPress={()=> navigation.navigate('Phone')}
         title="Avançar"
       />
     

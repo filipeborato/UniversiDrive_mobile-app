@@ -4,7 +4,7 @@ import ButtonText from "../../components/ButtonText";
 import Input from "../../components/Input";
 import LogoImage from "../../assets/svg/logo.svg";
 
-export default function Lastname ({navigation}){
+export default function Phone ({navigation}){
   return (
     <KeyboardAvoidingView style={styles.container}>
     
@@ -15,17 +15,17 @@ export default function Lastname ({navigation}){
         </View>
 
         <Text style={styles.text1}>
-         Agora digite seu sobrenome completo:
+         Qual é seu telefone?
         </Text>
 
-        <Input placeholder="Digite" />
+        <Input placeholder="(xx) xxxxx-xxxx" />
         <Text style={styles.text2}>
-        Essa informação será utilizada para identificar seu usuário na plataforma.
+        Vamos utilizar este número para enviar aos seus parceiros de carona a fim de que vocês se conectem.
         </Text>
         </View>
 
       <Button 
-       onPress={()=> navigation.navigate('Gender')}
+       onPress={()=> navigation.navigate('Emailandpassword')}
         title="Avançar"
       />
     

@@ -2,9 +2,11 @@ import React from "react";
 import { View, StyleSheet, Text, Button, KeyboardAvoidingView } from "react-native";
 import ButtonText from "../../components/ButtonText";
 import Input from "../../components/Input";
+import { onchangeEmail } from 'react';
+import { onchangePassword } from 'react';
 import LogoImage from "../../assets/svg/logo.svg";
 
-export default function Lastname ({navigation}){
+export default function Emailandpassword ({navigation}){
   return (
     <KeyboardAvoidingView style={styles.container}>
     
@@ -15,18 +17,25 @@ export default function Lastname ({navigation}){
         </View>
 
         <Text style={styles.text1}>
-         Agora digite seu sobrenome completo:
+         Qual será seu e-mail de login?
         </Text>
 
-        <Input placeholder="Digite" />
-        <Text style={styles.text2}>
-        Essa informação será utilizada para identificar seu usuário na plataforma.
+        <Input placeholder="email@dominio.com" />
+        
+        <Text style={styles.text1}>
+         Agora defina sua senha
         </Text>
+        <Input
+          placeholder="Senha"
+          onChangeText={onchangePassword}
+          secureTextEntry
+        />
+        
         </View>
 
       <Button 
-       onPress={()=> navigation.navigate('Gender')}
-        title="Avançar"
+       onPress={()=> navigation.navigate('Send2')}
+        title="Enviar"
       />
     
     </KeyboardAvoidingView>
@@ -40,7 +49,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "space-between",
-    padding: 30,
+    padding: 10,
   },
 
   wrapperLogin: {
@@ -58,13 +67,13 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
   text1: {
-    padding: 10,  
+    padding: 5,  
     color: "#4556b7",
     paddingLeft: 5,
     fontSize: 18,
   },
   text2: {
-    padding: 10,  
+    padding: 5,  
     color: "#778899",
     paddingLeft: 5,
     fontSize: 18,
