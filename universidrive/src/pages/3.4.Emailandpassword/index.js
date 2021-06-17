@@ -2,6 +2,7 @@ import React from "react";
 import { View, StyleSheet, Text, Button, KeyboardAvoidingView } from "react-native";
 import ButtonText from "../../components/ButtonText";
 import Input from "../../components/Input";
+import Select from "../../components/Select"
 import { onchangeEmail } from 'react';
 import { onchangePassword } from 'react';
 import LogoImage from "../../assets/svg/logo.svg";
