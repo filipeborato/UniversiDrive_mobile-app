@@ -1,12 +1,17 @@
-import React, { useCallback, useState } from "react";
-import { View, StyleSheet, Text } from "react-native";
+import "react-native-gesture-handler";
+import React from "react";
+import { View, StyleSheet, Text, KeyboardAvoidingView } from "react-native";
 import Button from "../../components/Button";
 import ButtonText from "../../components/ButtonText";
 import Input from "../../components/Input";
 import LogoImage from "../../assets/svg/logo.svg";
 import firebase from "@react-native-firebase/auth";
+import { onchangeEmail } from "react";
+import { onchangePassword } from "react";
+import { useState } from "react";
+import { useCallback } from "react";
 
-const Login = () => {
+export default function Login({ navigation }) {
   const firebaseAuth = firebase();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -47,23 +52,28 @@ const Login = () => {
         <Input
           placeholder="E-mail"
           onChangeText={onchangeEmail}
+          value={email}
           keyboardType="email-address"
         />
+
         <Input
           placeholder="Senha"
           onChangeText={onchangePassword}
+          value={password}
           secureTextEntry
         />
-        <ButtonText />
-        <Button text="entrar" bgcolor="#22ccdd" onPress={login} />
+        <ButtonText onPress={() => navigation.navigate("Recoverpassword")} />
+        <Button onPress={login} text="entrar" bgcolor="#22ccdd" />
       </View>
 
-      <Button text="Não tenho cadastro" bgcolor="#0099ff" />
+      <Button
+        text="Não tenho cadastro"
+        bgcolor="#0099ff"
+        onPress={() => navigation.navigate("Idonthavearegistration")}
+      />
     </View>
   );
-};
-
-export default Login;
+}
 
 const styles = StyleSheet.create({
   container: {
