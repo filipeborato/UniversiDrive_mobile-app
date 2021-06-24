@@ -1,51 +1,17 @@
-import 'react-native-gesture-handler';
+import "react-native-gesture-handler";
 import React from "react";
-import { View, StyleSheet, Text, KeyboardAvoidingView, } from "react-native";
+import { View, StyleSheet, Text, KeyboardAvoidingView } from "react-native";
 import Button from "../../components/Button";
 import ButtonText from "../../components/ButtonText";
 import Input from "../../components/Input";
 import LogoImage from "../../assets/svg/logo.svg";
 import firebase from "@react-native-firebase/auth";
-import { onchangeEmail } from 'react';
-import { onchangePassword } from 'react';
-import { useState } from 'react';
-import { useCallback } from 'react';
+import { onchangeEmail } from "react";
+import { onchangePassword } from "react";
+import { useState } from "react";
+import { useCallback } from "react";
 
-export default function Login ({navigation}) {
-  return (
-    
-    <View style={styles.container}>
-      <View style={styles.wrapperLogin}>
-        <View style={styles.header}>
-          <LogoImage width={300} height={140} />
-          <Text style={styles.headerText}>Carona universitária</Text>
-        </View>
-
-        <Input
-          placeholder="E-mail"
-          onChangeText={onchangeEmail}
-          keyboardType="email-address"
-        />
-        <Input
-          placeholder="Senha"
-          onChangeText={onchangePassword}
-          secureTextEntry
-        />
-        <ButtonText
-        onPress={() =>navigation.navigate('Recoverpassword')}
-        />
-        <Button text="entrar" bgcolor="#22ccdd" />
-      </View>
-
-      <Button text="Não tenho cadastro" bgcolor="#0099ff"
-      onPress={() =>navigation.navigate('Idonthavearegistration')}
-      />
-    </View>
-    
-  );
-  };
-
-const login = () => {
+export default function Login({ navigation }) {
   const firebaseAuth = firebase();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -73,9 +39,41 @@ const login = () => {
         var errorMessage = error.message;
         // ..
       });
-  }, [firebase, email, password]); 
-};
+  }, [firebase, email, password]);
 
+  return (
+    <View style={styles.container}>
+      <View style={styles.wrapperLogin}>
+        <View style={styles.header}>
+          <LogoImage width={300} height={140} />
+          <Text style={styles.headerText}>Carona universitária</Text>
+        </View>
+
+        <Input
+          placeholder="E-mail"
+          onChangeText={onchangeEmail}
+          value={email}
+          keyboardType="email-address"
+        />
+
+        <Input
+          placeholder="Senha"
+          onChangeText={onchangePassword}
+          value={password}
+          secureTextEntry
+        />
+        <ButtonText onPress={() => navigation.navigate("Recoverpassword")} />
+        <Button onPress={login} text="entrar" bgcolor="#22ccdd" />
+      </View>
+
+      <Button
+        text="Não tenho cadastro"
+        bgcolor="#0099ff"
+        onPress={() => navigation.navigate("Idonthavearegistration")}
+      />
+    </View>
+  );
+}
 
 const styles = StyleSheet.create({
   container: {
