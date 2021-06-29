@@ -11,12 +11,7 @@
   },
   "dependencies": {
     "@react-native-community/masked-view": "^0.1.11",
-<<<<<<< HEAD
-    "@react-navigation/native": "^5.9.4",
-    "@react-navigation/stack": "^5.14.5",
     "@react-native-community/checkbox": "^0.5.8",
-=======
->>>>>>> b1b9eb3c1478903c0d576fa94ba967e417cfe205
     "@react-native-firebase/app": "^12.0.0",
     "@react-native-firebase/auth": "^12.0.0",
     "@react-native-firebase/firestore": "^12.1.0",
@@ -29,9 +24,9 @@
     "react-native-safe-area-context": "^3.2.0",
     "react-native-screens": "^3.3.0",
     "react-native-svg": "^12.1.1",
-    "react-native-svg-transformer": "^0.14.3"
+    "react-native-svg-transformer": "^0.14.3",
     "react-native-dropdown-picker": "^5.1.21",
-    "react-native-material-design": "^0.3.7",
+    "react-native-material-design": "^0.3.7"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
