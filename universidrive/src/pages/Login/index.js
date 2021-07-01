@@ -54,7 +54,7 @@ const Login = () => {
           onChangeText={onchangePassword}
           secureTextEntry
         />
-        <Button text="entrar" bgcolor="#22ccdd" onPress={login} />
+        <Button text="Entrar" bgcolor="#22ccdd" onPress={login} />
       </View>
 
       <Button text="Não tenho cadastro" bgcolor="#0099ff" />

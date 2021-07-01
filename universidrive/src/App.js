@@ -1,9 +1,9 @@
 import React from "react";
 import { View, Text } from "react-native";
-import DiasSemana from "./pages/DiasSemana";
+import Escolher from "./pages/Escolher";
 
 const App = () => {
-  return <DiasSemana />;
+  return <Escolher />;
 };
 
 export default App;

@@ -17,13 +17,12 @@ const Destino = () => {
         </View>
         <Text></Text>
         <Text></Text>
-        <Text>Para onde você vai?</Text>
-        <Text></Text>
+        <Text style={styles.texto}>Para onde você vai?</Text>
         <Input
           placeholder="Local de partida"
         />
         <Input
-          placeholder="Para onde você vai?"
+          placeholder="Destino"
         />
       </View>
 
@@ -56,4 +55,7 @@ const styles = StyleSheet.create({
     color: "#0077B6",
     fontWeight: "bold",
   },
+  texto: {
+    fontSize: 15
+  }
 });

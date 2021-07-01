@@ -1,76 +1,83 @@
 import React, { useState } from "react";
-import { Text, StyleSheet, View } from "react-native";
-import { CheckBox } from '@react-native-community/checkbox';
+import { View, StyleSheet, Text } from "react-native";
+import Button from "../../components/Button";
+import { CheckBox } from "@react-native-community/checkbox";
 
 const DiasSemana = () => {
   return (
     <View style={styles.container}>
-      <View style={styles.checkboxContainer}>
-        <Text>Quais dias da semana?</Text>
+    <View style={styles.wrapperLogin}>
+      <Text style={styles.texto}>Em quais dias da semana?</Text>
         <CheckBox
-          value={isSelected}
-          onValueChange={setSelection}
-          style={styles.checkbox}
+          label="Domingo"
+          value={check}
+          onChange={handleCheck}
         />
-        <Text style={styles.label}>Segunda-feira</Text>
         <CheckBox
-          value={isSelected}
-          onValueChange={setSelection}
-          style={styles.checkbox}
+          label="Segunda"
+          value={check}
+          onChange={handleCheck}
         />
-        <Text style={styles.label}>Terça-feira</Text>
         <CheckBox
-          value={isSelected}
-          onValueChange={setSelection}
-          style={styles.checkbox}
+          label="Terça"
+          value={check}
+          onChange={handleCheck}
         />
-        <Text style={styles.label}>Quarta-feira</Text>
         <CheckBox
-          value={isSelected}
-          onValueChange={setSelection}
-          style={styles.checkbox}
+          label="Quarta"
+          value={check}
+          onChange={handleCheck}
         />
-        <Text style={styles.label}>Quinta-feira</Text>
         <CheckBox
-          value={isSelected}
-          onValueChange={setSelection}
-          style={styles.checkbox}
+          label="Quinta"
+          value={check}
+          onChange={handleCheck}
         />
-        <Text style={styles.label}>Sexta-feira</Text>
         <CheckBox
-          value={isSelected}
-          onValueChange={setSelection}
-          style={styles.checkbox}
+          label="Sexta"
+          value={check}
+          onChange={handleCheck}
         />
-        <Text style={styles.label}>Sábado</Text>
         <CheckBox
-          value={isSelected}
-          onValueChange={setSelection}
-          style={styles.checkbox}
+          label="Sábado"
+          value={check}
+          onChange={handleCheck}
         />
-        <Text style={styles.label}>Domingo</Text>
+
       </View>
       <Button text="Continuar" bgcolor="#0099ff" />
     </View>
-  );
+  )
 };
 
 export default DiasSemana;
 
+  
+
 const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      alignItems: "center",
-      justifyContent: "center",
-    },
-    checkboxContainer: {
-      flexDirection: "row",
-      marginBottom: 20,
-    },
-    checkbox: {
-      alignSelf: "center",
-    },
-    label: {
-      margin: 8,
-    },
-  });
+  container: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "space-between",
+    padding: 30,
+  },
+
+  wrapperLogin: {
+    width: "100%",
+  },
+
+  header: {
+    alignItems: "center",
+  },
+
+  headerText: {
+    textTransform: "uppercase",
+    fontSize: 21,
+    color: "#0077B6",
+    fontWeight: "bold",
+  },
+  texto: {
+    fontSize: 15
+  }
+});
+
