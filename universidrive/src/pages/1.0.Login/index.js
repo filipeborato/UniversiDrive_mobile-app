@@ -6,14 +6,13 @@ import ButtonText from "../../components/ButtonText";
 import Input from "../../components/Input";
 import LogoImage from "../../assets/svg/logo.svg";
 import firebase from "@react-native-firebase/auth";
-import Modal from "../../components/Modal";
+
 
 export default function Login({ navigation }) {
   const firebaseAuth = firebase();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  // esse estado tem que estar declarado na página que o modal vai aparecer!
-  const [isOpenModal, setIsOpenModal] = useState(false);
+ 
 
   const onchangeEmail = useCallback((value) => {
     setEmail(value);
@@ -41,7 +40,7 @@ export default function Login({ navigation }) {
   }, [firebase, email, password]);
 
   return (
-    <>
+    
       <View style={styles.container}>
         <View style={styles.wrapperLogin}>
           <View style={styles.header}>
@@ -63,21 +62,17 @@ export default function Login({ navigation }) {
             secureTextEntry
           />
           <ButtonText onPress={() => navigation.navigate("Recoverpassword")} />
-          <Button onPress={login} text="entrar" bgcolor="#22ccdd" />
+          <Button onPress={() => navigation.navigate("Destino")} text="entrar" bgcolor="#22ccdd" />
         </View>
-        <View>
-          {/* setar esse onpress no botão que dispara o modal!! */}
-          <Text onPress={() => setIsOpenModal(true)}>Abrir Modal </Text>
-        </View>
+        
         <Button
           text="Não tenho cadastro"
           bgcolor="#0099ff"
           onPress={() => navigation.navigate("Idonthavearegistration")}
         />
       </View>
-      {/* Esse aqui é o meu modal, o modal sempre vai abrir quando isOpenModal for true! */}
-      {isOpenModal && <Modal isOpenModal={setIsOpenModal} />}
-    </>
+      
+   
   );
 }
 

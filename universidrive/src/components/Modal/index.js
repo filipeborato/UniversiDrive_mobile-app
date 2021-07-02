@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
+import { View, Text, StyleSheet, Image, TouchableOpacity, Linking } from "react-native";
 import AvatarNoUserImage from "../../assets/png/avatar-no-user.png";
 import ZapImage from "../../assets/png/white-whatsapp-icon.png";
 const Modal = (props) => {
@@ -55,10 +55,13 @@ const Modal = (props) => {
           </Text>
         </View>
         <View style={styles.zap}>
-          <TouchableOpacity style={styles.zapButton}>
+
+          <TouchableOpacity
+          // onPress={() => Linking.openURL("whatsapp://send?text=&phone=+5541987093471") }
+          style={styles.zapButton}>
             <Image style={styles.zapImage} source={ZapImage} />
             <Text style={styles.zapText}>Entrar em contato</Text>
-          </TouchableOpacity>
+          </TouchableOpacity >
         </View>
       </View>
     </View>
