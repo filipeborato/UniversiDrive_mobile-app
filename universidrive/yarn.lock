@@ -1092,23 +1092,28 @@
   "resolved" "https://registry.npmjs.org/@react-native-community/eslint-plugin/-/eslint-plugin-1.1.0.tgz"
   "version" "1.1.0"
 
+"@react-native-community/geolocation@^2.0.2":
+  "integrity" "sha512-tTNXRCgnhJBu79mulQwzabXRpDqfh/uaDqfHVpvF0nX4NTpolpy6mvTRiFg7eWFPGRArsnZz1EYp6rHfJWGgEA=="
+  "resolved" "https://registry.npmjs.org/@react-native-community/geolocation/-/geolocation-2.0.2.tgz"
+  "version" "2.0.2"
+
 "@react-native-community/masked-view@^0.1.11":
   "integrity" "sha512-rQfMIGSR/1r/SyN87+VD8xHHzDYeHaJq6elOSCAD+0iLagXkSI2pfA0LmSXP21uw5i3em7GkkRjfJ8wpqWXZNw=="
   "resolved" "https://registry.npmjs.org/@react-native-community/masked-view/-/masked-view-0.1.11.tgz"
   "version" "0.1.11"
 
-"@react-native-firebase/app@^12.0.0":
-  "integrity" "sha512-ONIQUOiApnCwN/Xxnl6o9305hsuUsQaCWOp8JdlIniNM7QkkIlGqYgnvPowjEXEJVhMVME/B6NSNSidnOd/hHw=="
-  "resolved" "https://registry.npmjs.org/@react-native-firebase/app/-/app-12.0.0.tgz"
-  "version" "12.0.0"
+"@react-native-firebase/app@^12.1.0", "@react-native-firebase/app@12.1.0":
+  "integrity" "sha512-goulw5PFGo2NIqqZXpv7kyv0XPKWQT2G/2ZXEFMdgDnxZGRyiAH82gR/v9rAMCww1lFVTeMZdphU5WFN/qdptg=="
+  "resolved" "https://registry.npmjs.org/@react-native-firebase/app/-/app-12.1.0.tgz"
+  "version" "12.1.0"
   dependencies:
     "opencollective-postinstall" "^2.0.1"
     "superstruct" "^0.6.2"
 
-"@react-native-firebase/auth@^12.0.0":
-  "integrity" "sha512-+tudhzegmLOfVKVAD+wgSUXMc5Hc0J3F7cqr8yxYa3vjJEsRTf+F0HsxQOMtJZ7TNIFWyVIoZqzmD4Tb04caCw=="
-  "resolved" "https://registry.npmjs.org/@react-native-firebase/auth/-/auth-12.0.0.tgz"
-  "version" "12.0.0"
+"@react-native-firebase/auth@^12.1.0":
+  "integrity" "sha512-9/peQaPYl5M2q4q/06Sih3z+BL9wOlmXgPex7jqbF99DN6IUigEq6eOt0sR3/g0ftS/IRDG7BfbIN5MtuY1vbg=="
+  "resolved" "https://registry.npmjs.org/@react-native-firebase/auth/-/auth-12.1.0.tgz"
+  "version" "12.1.0"
 
 "@react-native-firebase/firestore@^12.1.0":
   "integrity" "sha512-SyiqRAQRS0C0Gh5gOZBp9UM0FFOF555uqJK+3NzO2GHGYM7ofLONyhnhZEJGWk9iDog/TnRjlAHC3C1zsDe+1w=="
@@ -6090,7 +6095,7 @@
     "kleur" "^3.0.3"
     "sisteransi" "^1.0.5"
 
-"prop-types@^15.7.2":
+"prop-types@^15.5.10", "prop-types@^15.7.2":
   "integrity" "sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ=="
   "resolved" "https://registry.npmjs.org/prop-types/-/prop-types-15.7.2.tgz"
   "version" "15.7.2"
@@ -6251,6 +6256,13 @@
   dependencies:
     "css-select" "^2.1.0"
     "css-tree" "^1.0.0-alpha.39"
+
+"react-native-swiper@^1.6.0":
+  "integrity" "sha512-OnkTTZi+9uZUgy0uz1I9oYDhCU3z36lZn+LFsk9FXPRelxb/KeABzvPs3r3SrHWy1aA67KGtSFj0xNK2QD0NJQ=="
+  "resolved" "https://registry.npmjs.org/react-native-swiper/-/react-native-swiper-1.6.0.tgz"
+  "version" "1.6.0"
+  dependencies:
+    "prop-types" "^15.5.10"
 
 "react-native-vector-icons@^2.0.1":
   "integrity" "sha1-N/9A4vx1OlZiSEbnRxKCuBi5Ltw="
