@@ -1,8 +1,13 @@
-import React, { useState } from "react";
-import { Text, StyleSheet, View } from "react-native";
+import React from "react";
+import { View, StyleSheet, Text } from "react-native";
+import Button from "../../components/Button";
+import ButtonText from "../../components/ButtonText";
+import Input from "../../components/Input";
+import LogoImage from "../../assets/svg/logo.svg";
+import firebase from "@react-native-firebase/auth";
 import { CheckBox } from '@react-native-community/checkbox';
 
-const DiasSemana = () => {
+export default function DiasSemana ({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.checkboxContainer}>
@@ -55,7 +60,6 @@ const DiasSemana = () => {
   );
 };
 
-export default DiasSemana;
 
 const styles = StyleSheet.create({
     container: {

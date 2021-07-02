@@ -9,6 +9,8 @@ import Gender from "./pages/3.2.Gender";
 import Phone from "./pages/3.3.Phone";
 import Emailandpassword from "./pages/3.4.Emailandpassword";
 import Send2 from "./pages/3.5.Send2";
+import Destino from "./pages/1.1.Destino";
+import DiasSemana from "./pages/1.2.DiasSemana";
 import "react-native-gesture-handler";
 
 import { NavigationContainer, StackActions } from "@react-navigation/native";
@@ -35,6 +37,8 @@ export default function App() {
       <SignUpContext.Provider value={{ signUpData, setSignUpData }}>
         <Stack.Navigator>
           <Stack.Screen name="Login" component={Login} />
+          <Stack.Screen name="Destino" component={Destino} />
+          <Stack.Screen name="DiasSemana" component={DiasSemana} />
           <Stack.Screen name="Recoverpassword" component={Recoverpassword} />
           <Stack.Screen name="Send" component={Send} />
           <Stack.Screen
